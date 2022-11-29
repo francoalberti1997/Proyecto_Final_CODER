@@ -9,7 +9,6 @@
 <body>
 <tr>
     USUARIOS        
-
     {%for usuario in usuarios%}
     <td>
         <p>{{usuario}}
@@ -30,7 +29,8 @@
 
 </tr>
 
-<form method="">
+<form method="POST">
+    {% csrf_token %}
     {{ form.as_p }}
     <button class="button is-success is-fullwidth is-medium mt-5"
             type="submit">Enviar

@@ -126,7 +126,8 @@ def contanos_experiencia(request):
 def profile(request, name = None):    #agregar más con django form
     usuarios = models.User.objects.all()
     form = SearchForm()
-    name = request.GET.get("name")
+
+    name = request.POST.get("name")
 
     if name:
         usuarios = models.User.objects.filter(username = name)
