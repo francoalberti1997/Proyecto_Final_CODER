@@ -1,0 +1,29 @@
+{% extends 'PrimeraApp/padre.html' %} 
+
+{% load static %}
+
+
+<title>Delete</title>
+</head>
+{% block contenidoQueCambia %}
+
+
+<p>
+    ¿estás seguro que deseas borrar {{form}}?
+</p>
+
+<form action="" method="POST">
+
+    {% csrf_token %}
+    <button>
+        Confirmar
+    </button>
+
+    <a href=" {% url 'profile' %} ">
+        Cancelar
+    </a>
+
+</form>
+
+
+{% endblock %}

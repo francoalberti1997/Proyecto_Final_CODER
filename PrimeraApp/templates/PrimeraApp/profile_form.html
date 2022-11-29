@@ -1,0 +1,24 @@
+{% extends 'PrimeraApp/padre.html' %} 
+
+{% load static %}
+
+
+<title>Profile</title>
+</head>
+{% block contenidoQueCambia %}
+
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    
+    <button name="id" value=" {{i.id}} ">
+        BOTONAZO
+    </button>
+
+</form>
+
+
+
+    
+{% endblock %}

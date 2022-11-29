@@ -1,0 +1,171 @@
+
+
+/*--------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------------- import Fonts ---------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900|Righteous&display=swap');
+
+/*****---------------------------------------- 1) font-family: 'Rajdhani', sans-serif;
+ 2) font-family: 'Poppins', sans-serif;
+ ----------------------------------------*****/
+
+
+/*--------------------------------------------------------------------- import Files ---------------------------------------------------------------------*/
+
+@import url(animate.min.css);
+@import url(normalize.css);
+@import url(icomoon.css);
+@import url(font-awesome.min.css);
+@import url(meanmenu.css);
+@import url(owl.carousel.min.css);
+@import url(swiper.min.css);
+@import url(slick.css);
+@import url(jquery.fancybox.min.css);
+@import url(jquery-ui.css);
+@import url(nice-select.css);
+
+/*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
+
+.parent {
+     position: relative;
+     background-color: black;
+     height: 200px;
+     width: 200px;
+   }
+
+/** footer **/
+
+
+
+span{
+     background-color: antiquewhite;
+     display: flex;
+     font-size: xx-large;
+     justify-content:space-between;
+     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdVnAg96B6c6KTrjdrA9s5DDBsJv0zc5DSVZ8PNsZ-ZVJaMm3xolt9Q1Mef34SQMhIXlc&usqp=CAU");
+}
+
+#log{
+     margin-right: 100px ;
+     font-size: x-large;
+}
+
+#footer{
+     font-size: 100%;
+     text-align: center ;
+     color: gold;     
+}
+/** end footer **/
+
+a{
+     width: 15%;
+     margin-right: 50px;
+     color: antiquewhite;
+     font-size: x-large;
+}
+
+nav{
+     background-color: darkred;
+     display: flex;
+     width: 100%;
+     justify-content: space-between;
+     margin-right: 200px;     
+     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdVnAg96B6c6KTrjdrA9s5DDBsJv0zc5DSVZ8PNsZ-ZVJaMm3xolt9Q1Mef34SQMhIXlc&usqp=CAU");
+}
+
+#tam_letra{
+
+     font-size: xx-large;
+     width: 15%;
+     color: white;
+     background-color: #008df3;
+     text-align: center ;
+     height: 50%;
+     justify-content: center;
+     margin-right: 15px;
+
+}
+
+#formulario{
+     background-color: red;
+     width:50%;
+     justify-content: right;
+}
+
+
+#content{
+     background-color: gainsboro;
+     height: 800px;
+     width: 100%;
+     position: absolute;
+}
+
+
+#p_home{
+background-color: tomato;
+width: 25%;
+font-size: xx-large;
+}
+
+#resultados{
+display: flex;
+background-color: #008df3;
+}
+
+#formulario_hijo{
+     background-color: #008df3;
+     margin-left: 950px;
+}
+
+#inicia{
+     background-color: antiquewhite;
+     width: 20%;
+     margin-left: 40%;
+     text-align: center;
+}
+
+.el_footer{
+    display: flex;
+    flex-direction: column;    
+
+}
+
+footer{
+     margin-top: auto;
+     background-color: darkred;
+     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdVnAg96B6c6KTrjdrA9s5DDBsJv0zc5DSVZ8PNsZ-ZVJaMm3xolt9Q1Mef34SQMhIXlc&usqp=CAU");
+ }
+
+.contenedor_curso{
+     display: flex;
+}
+
+
+#contenedor{
+     display: flex;
+     justify-content: space-between;    
+
+
+}
+
+.bloque{
+     background-color: rgb(246, 246, 246);
+     
+     
+}
+
+.test{
+     background-color: rgb(218, 215, 220);
+     display: flex;
+}
+
+#bienvenida{
+
+     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdVnAg96B6c6KTrjdrA9s5DDBsJv0zc5DSVZ8PNsZ-ZVJaMm3xolt9Q1Mef34SQMhIXlc&usqp=CAU");     color: aliceblue;
+}

@@ -1,0 +1,23 @@
+<html>
+
+    {% extends 'PrimeraApp/padre.html' %} 
+
+    {% block contenidoQueCambia %}
+    
+    {% load static %}
+
+<h1>
+
+    {% for usuario in usuarios %}
+        {% if (usuario.nombre == informacion) and (usuario.contraseña == contraseña) %}
+            <p>
+                ha ingresado
+            </p>
+        {% endif %}
+    {% endfor %}
+</h1>
+
+    {% endblock %}
+
+
+</html>

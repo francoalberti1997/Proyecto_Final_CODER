@@ -1,0 +1,42 @@
+{% extends 'PrimeraApp/padre.html' %} 
+
+{% load static %}
+
+
+<title>Profile</title>
+</head>
+{% block contenidoQueCambia %}
+<body>
+<tr>
+    USUARIOS        
+
+    {%for usuario in usuarios%}
+    <td>
+        <p>{{usuario}}
+            <a href="{% url 'update' usuario.id %}" style="color: black;">
+                Update
+            </a>
+
+            <a href=" {% url 'delete' usuario.id %} "style="color: black;">
+                Delete
+            </a>
+        </p>
+    </td>
+    {% endfor %}    
+</tr>
+
+<tr>
+
+
+</tr>
+
+<form method="">
+    {{ form.as_p }}
+    <button class="button is-success is-fullwidth is-medium mt-5"
+            type="submit">Enviar
+    </button>
+</form>
+
+</body>
+
+{% endblock %}

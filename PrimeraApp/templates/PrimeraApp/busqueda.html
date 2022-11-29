@@ -1,0 +1,32 @@
+<html>
+    <!--   HERENCIA  -->
+    {% extends 'PrimeraApp/padre.html' %} 
+
+    {% block contenidoQueCambia %}
+    
+    {% load static %}
+
+
+<h1>
+    <!--   BIENVENIDA   -->
+ 
+   hola {{nombre}}
+
+</h1>
+        <!--    MODEL QUE SE LLAMA COMENTAR_EXPERIENCIA   -->
+
+<form action=" {% url 'registrar' %} " method="POST">
+    {% csrf_token %}
+   
+    {{form.as_p}}
+
+    <input type="submit" value="enviar todo">
+</form>
+
+    {% endblock %}
+
+
+
+
+
+</html>

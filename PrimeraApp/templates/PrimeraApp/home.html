@@ -1,0 +1,88 @@
+{% extends 'PrimeraApp/padre.html' %} 
+
+{% block contenidoQueCambia %}
+
+{% load static %}
+<html>
+
+   <span>
+      <div id="bienvenida">
+      {% if user.is_authenticated %}
+         Hola! {{request.user}} 
+      {% else %}
+         
+            Hola visitante! Te recomendamos loguearte o registrarte para acceder a nuestro contenido gratuito!
+         
+      {% endif %}
+      </div>
+
+
+  
+      
+        <p style="background-color: yellow;"> 
+         {%for message in messages%}
+            {{message}}
+         {% endfor %}
+         </p>
+         
+         
+
+
+
+      <div>
+         {% if not user.is_authenticated %}  
+      <a href=" {% url 'login' %} "> 
+         LOGIN
+      </a>
+
+         {% else %}
+         <a href=" {% url 'logout' %} "> 
+            LOGOUT   
+         </a>
+         {% endif %}
+      </div>
+   
+   </span>
+
+
+</nav>
+
+
+<div id="contenedor">
+
+
+<div class="bloque">
+   <h2 >
+      Nuestros alumnos ya están viendo los resultados!   
+   </h2>      
+   {%for experiencia in experiencias%}
+      <H1>
+      {{experiencia}}
+      </H1>
+   {% endfor %}
+</div>
+
+<div class="bloque">
+
+   <h2>
+      ¡Realizá un test y descubrí tu nivel!
+   </h2>
+
+   <img src="../../static/PrimeraApp/images/test.jpg" alt="">
+   <h3>
+
+   <a href="{% url 'test_ingles' %}" style="color: black;">   ¡Realizar ahora!      </a>
+   
+   </h3>
+
+</div>
+
+</div>
+
+
+</html>
+
+
+
+{% endblock %}
+

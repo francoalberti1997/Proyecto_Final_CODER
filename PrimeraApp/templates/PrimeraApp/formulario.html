@@ -1,0 +1,22 @@
+<html>
+    <!--   HERENCIA  -->
+    {% extends 'PrimeraApp/padre.html' %} 
+
+    {% block contenidoQueCambia %}
+    
+    {% load static %}
+
+    <form action="" method="POST">
+    {% csrf_token %}
+    <div>
+        {{formulario.as_p}}
+        {{profile.as_p}}
+    </div>
+    
+    <input type="submit" name="exp_bttn" value="Enviar"/>
+            
+    </form>
+    
+    {% endblock %}
+
+    </html>

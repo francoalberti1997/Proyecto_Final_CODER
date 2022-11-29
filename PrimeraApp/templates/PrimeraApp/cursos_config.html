@@ -1,0 +1,57 @@
+{% extends 'PrimeraApp/padre.html' %} 
+
+{% block contenidoQueCambia %}
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'PrimeraApp/css/estilo.css' %}">
+
+
+<div class="contenedor_gral">
+
+<div class="mostrar_cursos">
+    <h2> CURSOS ACTUALES</h2>
+
+        {% for curso in cursos %}
+        <div style="background-color: white;">
+        <p> {{curso}}</p>
+        
+        
+        <a href="{% url 'update_curso' curso.id %}" style="color: black;">
+            Update
+        </a>
+
+        <a href=" {% url 'delete_curso' curso.id %} "style="color: black;">
+            Delete
+        </a>
+
+        <p>
+            Subido por: {{curso.autor}}
+        </p>
+
+        </div>
+
+        {% endfor %}
+</div>
+
+
+<div>
+
+<form action="" method="POST" enctype="multipart/form-data">
+    <h2>AGREGAR NUEVOS CURSOS</h2>
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="enviar">
+
+</form>
+
+
+</div>
+
+</div>
+
+
+
+
+
+{% endblock %}

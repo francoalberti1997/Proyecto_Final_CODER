@@ -1,0 +1,48 @@
+{% extends 'PrimeraApp/padre.html' %} 
+
+{% block contenidoQueCambia %}
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'PrimeraApp/css/estilo.css' %}">
+
+<h2 style="background-color: yellow;">
+    {%for message in messages%}
+        te recomendamos realizar el {{message}}
+    {% endfor %}
+</h2>
+
+<article>
+    {% for objeto in objetos %}
+    <!--contenedor general -->
+    <div class="contenedor_curso">
+        
+        <!--contenedor de fotos y presentacion-->
+        <div class="cursos_fotos">
+            
+            <h2> {{objeto.título}} </h2>
+            <h3>{{objeto.subtítulo}}</h3>
+            
+            <img src="{{objeto.imagen.url}}" alt="no carga" width="400px" height="400px">
+            
+        </div>
+
+        <!--contenedor del cuerpo del curso-->
+        
+        <div style="font-size: 30px;">
+            {{objeto.cuerpo}}
+            
+            <a href="{% url 'formulario_inscripcion' objeto.id %}"><h3 style="color: black;">¡Inicia ya!</h3></a>
+            
+
+        </div>
+
+    </div>
+    {% endfor %}
+
+</article>
+
+
+{% endblock %}
+
+<img src="https://scontent.fepa14-1.fna.fbcdn.net/v/t39.30808-6/314004581_3484672318521900_8184419875079873819_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeHr8UR3H4ySkC-Bwm_c9uB6EMr-pEtzJ00Qyv6kS3MnTWNtiJmiIA0mJiPptNF7dw4CC3LLSxFFMViGMmlZpY3v&_nc_ohc=HhSPJhii6G0AX-qt1b2&_nc_ht=scontent.fepa14-1.fna&oh=00_AfCgnYGf3k1dn_RyH3_psoY1gcPuC8NMH75FRKcTEdoc9A&oe=638776E5" alt="">

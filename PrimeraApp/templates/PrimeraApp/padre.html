@@ -1,0 +1,88 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=" {% static 'PrimeraApp/css/style.css' %} ">
+    <link rel="icon" type="image/gif" href="../../static/PrimeraApp/images/Star.ico" />
+
+    <!-- Único meta que se ve en la página (pestaña) -->
+</head>
+
+
+
+    <nav>   
+
+
+            <a href="http://127.0.0.1:8000/">
+                HOME
+            </a>  
+            
+            {% if request.user.is_authenticated %}
+            
+            
+
+            {% else %}
+                <a href="{% url 'register' %}">
+                    REGISTRARSE
+                </a>
+            {% endif %}
+
+            
+            <a href="{% url 'contanos_experiencia' %}">
+                CONTANOS TU EXPERIENCIA 
+            </a>
+            
+            <a href="{% url 'settings' %}">
+                CONFIGURACIÓN
+            </a>
+            
+            <a href="{% url 'mostrar_curso' %}">
+                CURSOS
+            </a>
+            
+            
+    </nav>
+
+    
+
+<body>
+    
+    
+
+
+<div id="foto">
+    <style>
+         #foto{
+          background-image: url('https://t3.ftcdn.net/jpg/03/70/42/66/360_F_370426690_Pejt9KxjWTHPklsKwripaxr0iA17zupF.jpg');
+          height: 300px;
+          width: 100%;
+        }   
+        </style>
+</div>
+    
+{% block contenidoQueCambia %}
+{% endblock %}
+
+</body>
+
+<!--    Footer        -->
+{% if not request.user.is_authenticated  %}
+<div class="el_footer">
+    <footer>
+        <p id = "inicia">
+       <a href="{% url  'formulario' %}" style="color: black;">
+        INICIÁ YA MISMO
+       </a>
+        </p>    
+    </footer>
+</div>
+
+{% endif %}
+
+</html>

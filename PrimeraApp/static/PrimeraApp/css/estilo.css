@@ -1,0 +1,26 @@
+div{
+    background-color: whitesmoke;
+    height: 100%;    
+}
+
+article{
+
+    background-color: black;
+    height: 100%;
+}
+
+footer{
+    margin-top: 100px;
+}
+
+.contenedor_curso{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdVnAg96B6c6KTrjdrA9s5DDBsJv0zc5DSVZ8PNsZ-ZVJaMm3xolt9Q1Mef34SQMhIXlc&usqp=CAU");}
+
+.contenedor_gral{
+    display: flex;
+}
+
+.mostrar_cursos{
+    width: 50%;
+}
+

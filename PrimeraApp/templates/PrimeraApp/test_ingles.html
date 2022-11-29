@@ -1,0 +1,67 @@
+{% extends 'PrimeraApp/padre.html' %} 
+
+{% block contenidoQueCambia %}
+
+{% load static %}
+
+<div class="test">
+    
+
+    <img src="../../static/PrimeraApp/images/test.jpg" alt="">
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <h2>What´s your name?</h2>
+        <p>I ... Franco</p>
+
+        <select name="pregunta1" id="">
+
+            <option value="am">am</option>
+            <option value="is">is</option>
+            <option value="are">are</option>
+
+        </select>
+
+        <h2>Where are you from?</h2>
+        <p>I ... from Argentina</p>
+        <select name="pregunta2" id="">
+
+            <option value="am">am</option>
+            <option value="is">is</option>
+            <option value="are">are</option>
+
+        </select>
+        
+        <h2>What does she do?</h2>
+        <p>She ... a lawyer</p>
+        <select name="pregunta3" id="">
+
+            <option value="am">am</option>
+            <option value="is">is</option>
+            <option value="are">are</option>
+
+        </select>
+
+        <h2>What do they do?</h2>
+            <p>They ... students</p>
+
+            <select name="pregunta4" id="">
+
+                <option value="am">am</option>
+                <option value="is">is</option>
+                <option value="are">are</option>    
+    
+            </select>
+
+        <input type="submit" value="Enviar">
+    </form>
+    
+</div>
+
+
+
+
+
+
+
+{% endblock %}
